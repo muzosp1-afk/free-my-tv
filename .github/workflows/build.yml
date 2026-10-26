@@ -16,9 +16,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Run build script
         run: |
           chmod +x build.sh
@@ -28,4 +25,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: FreeMyTV-TMDB
-          path: "*.apk"
+          path: "**/*.apk"
